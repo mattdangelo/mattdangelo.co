@@ -1,20 +1,20 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "LiveTerm",
-  "name": "John Doe",
+  "readmeUrl": "https://raw.githubusercontent.com/mattdangelo/mattdangelo/main/README.md",
+  "title": "Matt D'Angelo",
+  "name": "Matt D'Angelo",
   "ascii": "liveterm",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "mattdangelo",
+    "linkedin": "md6"
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
-  "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
+  "email": "matthew.dangelo6@gmail.com",
+  "ps1_hostname": "mattdangelo.co",
+  "ps1_username": "guest",
+  "repo": "https://github.com/mattdangelo",
   "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
   "donate_urls": {
-    "paypal": "https://paypal.me/cveinnt",
-    "patreon": "https://patreon.com/cveinnt"
+    "paypal": "https://paypal.me/mattdangelo6",
+	"bitcoin": "14KvY3Pg2GKyaxGzkHAh2gNtapZeKd4jM2"
   },
   "colors": {
     "light": {

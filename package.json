@@ -1,11 +1,11 @@
 {
-  "name": "liveterm",
-  "version": "0.1.0",
+  "name": "matt-dangelo",
+  "version": "1.0.0",
   "license": "MIT",
   "author": {
-    "name": "Vincent Wu",
-    "url": "https://cveinnt.com",
-    "email": "contact@wensenwu.com"
+    "name": "Matthew D'Angelo",
+    "url": "https://matt-dangelo.com",
+    "email": "matthew.dangelo6@gmail.com"
   },
   "scripts": {
     "dev": "next dev",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "next": "12.1.6",
+    "next": "^12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.3.1"

@@ -1,4 +1,6 @@
-// List of commands that do not require API calls
+import { getProjects } from '../api';
+import { getQuote } from '../api';
+import { getReadme } from '../api';
 
 import * as bin from './index';
 import config from '../../../config.json';
@@ -14,7 +16,8 @@ export const help = async (args: string[]): Promise<string> => {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-  return `Welcome! Here are all the available commands:
+    return `
+Welcome! Here are all the available commands:
 \n${c}\n
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
@@ -25,91 +28,77 @@ Type 'sumfetch' to display summary.
 // Redirection
 export const repo = async (args: string[]): Promise<string> => {
   window.open(`${config.repo}`);
-  return 'Opening Github repository...';
+    return `
+Opening Github repository...`;
 };
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
+    return `
+Hi! I'm ${config.name}. Welcome to my site
+
 More about me:
 'sumfetch' - short summary.
-'resume' - my latest resume.
 'readme' - my github readme.`;
-};
-
-export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
-  return 'Opening resume...';
 };
 
 // Donate
 export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
+    return `
+Thank you for your interest. Here are the ways you can support me!
+
+  <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
+  <u><a class="text-light-blue dark:text-dark-blue underline" >${config.donate_urls.bitcoin}</a></u>
 `;
 };
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
   window.open(`mailto:${config.email}`);
-  return `Opening mailto:${config.email}...`;
+    return `
+Opening mailto:${config.email}...`;
 };
 
 export const github = async (args: string[]): Promise<string> => {
   window.open(`https://github.com/${config.social.github}/`);
 
-  return 'Opening github...';
+    return `
+Opening Github...`;
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
   window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
-  return 'Opening linkedin...';
+    return `
+Opening LinkedIn...`;
 };
 
-// Search
-export const google = async (args: string[]): Promise<string> => {
-  window.open(`https://google.com/search?q=${args.join(' ')}`);
-  return `Searching google for ${args.join(' ')}...`;
-};
-
-export const duckduckgo = async (args: string[]): Promise<string> => {
-  window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
-  return `Searching duckduckgo for ${args.join(' ')}...`;
-};
-
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
-};
-
-export const reddit = async (args: string[]): Promise<string> => {
-  window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
-  return `Searching reddit for ${args.join(' ')}...`;
-};
-
-// Typical linux commands
 export const echo = async (args: string[]): Promise<string> => {
   return args.join(' ');
 };
 
 export const whoami = async (args: string[]): Promise<string> => {
-  return `${config.ps1_username}`;
+    return `
+${config.ps1_username}`;
 };
 
 export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
-fake
-directories`;
+    return `
+bin
+dev
+etc
+home
+lib
+mnt
+opt
+root
+usr
+var`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
+    return `
+Unfortunately, disk space costs money.
 if you want to help, you can type 'donate'.`;
 };
 
@@ -117,41 +106,58 @@ export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
-export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
-};
-
-export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
-};
-
-export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
-};
-
 export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
+    return `
+Permission denied: this incident might be reported?`;
 };
 
-// Banner
-export const banner = (args?: string[]): string => {
-  return `
-█████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
+export const projects = async (args: string[]): Promise<string> => {
+  const projects = await getProjects();
+  return projects
+    .map(
+      (repo: { name: any; html_url: any; }) =>
+        `${repo.name} - <a class="text-light-blue dark:text-dark-blue underline" href="${repo.html_url}" target="_blank">${repo.html_url}</a>`,
+    )
+    .join('\n');
+};
 
-Type 'help' to see the list of available commands.
-Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
-`;
+export const quote = async (args: string[]): Promise<string> => {
+  const data = await getQuote();
+  return data.quote;
+};
+
+export const readme = async (args: string[]): Promise<string> => {
+  const readme = await getReadme();
+    return `
+Opening GitHub README...\n
+  ${readme}`;
+};
+
+export const sumfetch = (args?: string[]): string => {
+return `
+       o8%8888,                    sumfetch        
+     o88%8888888.                 -----------
+    8'-    -:8888b                 ABOUT
+   8'         8888                 ${config.name}
+  d8.-=. ,==-.:888b                Adelaide  Melbourne
+  >8 '~\' :'~' d8888                B.E. (Honours) (Software)
+  88         ,88888                <u><a href="${config.repo}" target="_blank">Github</a></u>
+  88b. '-~  ':88888               -----------
+  888b ~==~ .:88888                CONTACT 
+  88888o--:':::8888                <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
+  88888| :::' 8888b                <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
+  8888^^'       8888b              <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
+ d888           ,%888b.           -----------
+d88%            %%%8--'-.          DONATE 
+/88:.__ ,       _%-' --- -         <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
+   '''::===..-'   =  --.  '        <u><a class="text-light-blue dark:text-dark-blue underline" >${config.donate_urls.bitcoin}</a></u>
+`
+};
+
+export const banner = (args?: string[]) : string => {
+return sumfetch() + `
+
+  Type 'help' to see the list of available commands.
+  Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for my Github account.
+`
 };

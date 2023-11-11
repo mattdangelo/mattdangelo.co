@@ -4,7 +4,7 @@ import config from '../../config.json';
 import { Input } from '../components/input';
 import { useHistory } from '../components/history/hook';
 import { History } from '../components/history/History';
-import { banner } from '../utils/bin';
+import { banner } from '../utils/bin/commands';
 
 interface IndexPageProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
