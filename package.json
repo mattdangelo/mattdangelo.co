@@ -7,6 +7,9 @@
     "url": "https://matt-dangelo.com",
     "email": "matthew.dangelo6@gmail.com"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
