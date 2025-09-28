@@ -35,4 +35,7 @@ yarn-error.log*
 # vs
 .vs
 
+# IntelliJ IDEA
+.idea/
+
 .gitattributes

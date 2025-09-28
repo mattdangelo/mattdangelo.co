@@ -1,4 +1,3 @@
-import { getProjects } from '../api';
 import { getQuote } from '../api';
 import { getReadme } from '../api';
 
@@ -8,7 +7,7 @@ import config from '../../../config.json';
 // Help
 export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(', ');
-  var c = '';
+  let c = '';
   for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
     if (i % 7 === 0) {
       c += Object.keys(bin).sort()[i - 1] + '\n';
@@ -16,7 +15,7 @@ export const help = async (args: string[]): Promise<string> => {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-    return `
+  return `
 Welcome! Here are all the available commands:
 \n${c}\n
 [tab]: trigger completion.
@@ -25,16 +24,9 @@ Type 'sumfetch' to display summary.
 `;
 };
 
-// Redirection
-export const repo = async (args: string[]): Promise<string> => {
-  window.open(`${config.repo}`);
-    return `
-Opening Github repository...`;
-};
-
 // About
 export const about = async (args: string[]): Promise<string> => {
-    return `
+  return `
 Hi! I'm ${config.name}. Welcome to my site
 
 More about me:
@@ -44,7 +36,7 @@ More about me:
 
 // Donate
 export const donate = async (args: string[]): Promise<string> => {
-    return `
+  return `
 Thank you for your interest. Here are the ways you can support me!
 
   <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
@@ -55,21 +47,21 @@ Thank you for your interest. Here are the ways you can support me!
 // Contact
 export const email = async (args: string[]): Promise<string> => {
   window.open(`mailto:${config.email}`);
-    return `
+  return `re
 Opening mailto:${config.email}...`;
 };
 
 export const github = async (args: string[]): Promise<string> => {
   window.open(`https://github.com/${config.social.github}/`);
 
-    return `
+  return `
 Opening Github...`;
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
   window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
-    return `
+  return `
 Opening LinkedIn...`;
 };
 
@@ -78,12 +70,12 @@ export const echo = async (args: string[]): Promise<string> => {
 };
 
 export const whoami = async (args: string[]): Promise<string> => {
-    return `
+  return `
 ${config.ps1_username}`;
 };
 
 export const ls = async (args: string[]): Promise<string> => {
-    return `
+  return `
 bin
 dev
 etc
@@ -97,7 +89,7 @@ var`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-    return `
+  return `
 Unfortunately, disk space costs money.
 if you want to help, you can type 'donate'.`;
 };
@@ -107,18 +99,8 @@ export const date = async (args: string[]): Promise<string> => {
 };
 
 export const sudo = async (args?: string[]): Promise<string> => {
-    return `
+  return `
 Permission denied: this incident might be reported?`;
-};
-
-export const projects = async (args: string[]): Promise<string> => {
-  const projects = await getProjects();
-  return projects
-    .map(
-      (repo: { name: any; html_url: any; }) =>
-        `${repo.name} - <a class="text-light-blue dark:text-dark-blue underline" href="${repo.html_url}" target="_blank">${repo.html_url}</a>`,
-    )
-    .join('\n');
 };
 
 export const quote = async (args: string[]): Promise<string> => {
@@ -128,13 +110,13 @@ export const quote = async (args: string[]): Promise<string> => {
 
 export const readme = async (args: string[]): Promise<string> => {
   const readme = await getReadme();
-    return `
+  return `
 Opening GitHub README...\n
   ${readme}`;
 };
 
 export const sumfetch = (args?: string[]): string => {
-return `
+  return `
        o8%8888,                    sumfetch        
      o88%8888888.                 -----------
     8'-    -:8888b                 ABOUT
@@ -151,13 +133,16 @@ return `
 d88%            %%%8--'-.          DONATE 
 /88:.__ ,       _%-' --- -         <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
    '''::===..-'   =  --.  '        <u><a class="text-light-blue dark:text-dark-blue underline" >${config.donate_urls.bitcoin}</a></u>
-`
+`;
 };
 
-export const banner = (args?: string[]) : string => {
-return sumfetch() + `
+export const banner = (args?: string[]): string => {
+  return (
+    sumfetch() +
+    `
 
   Type 'help' to see the list of available commands.
   Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for my Github account.
 `
+  );
 };

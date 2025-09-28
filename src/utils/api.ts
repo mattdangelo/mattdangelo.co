@@ -14,8 +14,6 @@ export const getReadme = async () => {
 };
 
 export const getQuote = async () => {
-  const { data } = await axios.get('https://api.quotable.io/random');
-  return {
-    quote: `“${data.content}” — ${data.author}`,
-  };
+  const { data } = await axios.get('/api/quote');
+  return data;
 };
