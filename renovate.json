@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "reviewers": ["mattdangelo"],
+  "labels": ["dependencies"],
+
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "dev dependencies",
+      "automerge": false
+    },
+    {
+      "matchPackageNames": ["next"],
+      "groupName": "next framework",
+      "automerge": false
+    },
+    {
+      "matchPackageNames": ["react", "react-dom"],
+      "groupName": "react core",
+      "automerge": false
+    }
+  ]
+}
