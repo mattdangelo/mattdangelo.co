@@ -5,17 +5,11 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'media',
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      ...colors,
+    extend: {
+      colors,
     },
-    extend: {},
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };
