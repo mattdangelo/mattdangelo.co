@@ -132,7 +132,7 @@ export const sumfetch = (args?: string[]): string => {
  d888           ,%888b.           -----------
 d88%            %%%8--'-.          DONATE 
 /88:.__ ,       _%-' --- -         <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
-   '''::===..-'   =  --.  '        <u><a class="text-light-blue dark:text-dark-blue underline" >${config.donate_urls.bitcoin}</a></u>
+   '''::===..-'   =  --.  '        <u>${config.donate_urls.bitcoin}</u>
 `;
 };
 
