@@ -6,8 +6,27 @@ const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   const onClickAnywhere = () => {
+    if (window.getSelection()?.toString()) {
+      return;
+    }
     inputRef.current.focus();
   };
+
+  React.useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      const input = inputRef.current;
+      if (!input || document.activeElement === input) {
+        return;
+      }
+      if (event.ctrlKey || event.metaKey || event.altKey) {
+        return;
+      }
+      input.focus();
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
 
   return (
     <>

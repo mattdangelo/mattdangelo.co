@@ -40,7 +40,7 @@ export const donate = async (args: string[]): Promise<string> => {
 Thank you for your interest. Here are the ways you can support me!
 
   <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
-  <u><a class="text-light-blue dark:text-dark-blue underline" >${config.donate_urls.bitcoin}</a></u>
+  ${config.donate_urls.bitcoin}
 `;
 };
 
