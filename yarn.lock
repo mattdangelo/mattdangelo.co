@@ -291,7 +291,7 @@
 
 "@img/colour@^1.1.0":
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@img/colour/-/colour-1.1.0.tgz#b0c2c2fa661adf75effd6b4964497cd80010bb9d"
+  resolved "https://registry.npmjs.org/@img/colour/-/colour-1.1.0.tgz"
   integrity sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==
 
 "@img/sharp-darwin-arm64@0.35.3":
@@ -352,7 +352,7 @@
 
 "@img/sharp-libvips-linux-x64@1.3.2":
   version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@img/sharp-libvips-linux-x64/-/sharp-libvips-linux-x64-1.3.2.tgz#abc9a3114495b705ba20b7c1568b9eecd62aebbb"
+  resolved "https://registry.npmjs.org/@img/sharp-libvips-linux-x64/-/sharp-libvips-linux-x64-1.3.2.tgz"
   integrity sha512-ITPEtgffGJ0S6G9dRyw/366tJQqFRcHWPHhC+Stpg3Z8AEMrDrTr2lhdz4f/Y/HMbRh//7Z5mBzEpVdi62Oc3w==
 
 "@img/sharp-libvips-linuxmusl-arm64@1.3.2":
@@ -402,7 +402,7 @@
 
 "@img/sharp-linux-x64@0.35.3":
   version "0.35.3"
-  resolved "https://registry.yarnpkg.com/@img/sharp-linux-x64/-/sharp-linux-x64-0.35.3.tgz#9843c32f39aeac4b60dd60f9e3416520a4e4de46"
+  resolved "https://registry.npmjs.org/@img/sharp-linux-x64/-/sharp-linux-x64-0.35.3.tgz"
   integrity sha512-8pqvxubL2PGdhlPy6GLqzDYMUjyRmKAwKHYKixpdJYBUK7PJ0C029XdsnpFIdgRZG68fZiGdHVWcKPvtiPB4cA==
   optionalDependencies:
     "@img/sharp-libvips-linux-x64" "1.3.2"
@@ -493,7 +493,7 @@
 
 "@next/env@16.3.2":
   version "16.3.2"
-  resolved "https://registry.yarnpkg.com/@next/env/-/env-16.3.2.tgz#f7c611913413f2b7a287d62e75a95aa25b01d283"
+  resolved "https://registry.npmjs.org/@next/env/-/env-16.3.2.tgz"
   integrity sha512-8k4YoG8cM7LWlkfzGNYCRBbFNlernLiMw4s0btVl+CmmWqn3VpYypA72/5Feb1UWdxe6tHqr5KHP4p4Y4m9luA==
 
 "@next/eslint-plugin-next@16.3.2":
@@ -526,7 +526,7 @@
 
 "@next/swc-linux-x64-gnu@16.3.2":
   version "16.3.2"
-  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-16.3.2.tgz#905f08329df7c29026bbdce84fefc4000e28c9ca"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-16.3.2.tgz"
   integrity sha512-Fe0SA2j8X0kmc3aveuHD7UktO3AE2+mH3LguP60vGbz7u0z+MrDXbeb5iZFYAwR7EzzzXJ2Yk966w9mGTFMqfA==
 
 "@next/swc-linux-x64-musl@16.3.2":
@@ -582,7 +582,7 @@
 
 "@swc/helpers@0.5.23":
   version "0.5.23"
-  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.23.tgz#19287d0d86d962b111376039a50c792902c9a86a"
+  resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.23.tgz"
   integrity sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==
   dependencies:
     tslib "^2.8.0"
@@ -725,10 +725,10 @@
   dependencies:
     undici-types ">=7.24.0 <7.24.7"
 
-"@types/react-dom@^19.2.3":
-  version "19.2.4"
-  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.4.tgz"
-  integrity sha512-Bsc+QHgp+P/F02XDzNCY9jnZNCUuLki36KT7VKrTXXLdHf+vHMNZnW1rVu5DNW/rCK+fya3DATySbLM4yhtKUw==
+"@types/react-dom@^19.2.5":
+  version "19.2.5"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-19.2.5.tgz#d4ecf8d704cab59901d3fbb0975b6f855306595f"
+  integrity sha512-fMPwH9v7r/pp43yUd2/Mbiex5KouJwwR3dzHkhLREUC6764VyDsqxhAxv6OFEYR1RhjOyD1naqba8ECDBe7ZQg==
 
 "@types/react@^19.2.17":
   version "19.2.18"
@@ -1145,15 +1145,10 @@ balanced-match@^4.0.2:
   resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-4.0.4.tgz"
   integrity sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==
 
-baseline-browser-mapping@^2.11.12:
+baseline-browser-mapping@^2.11.12, baseline-browser-mapping@^2.9.19:
   version "2.11.13"
   resolved "https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.11.13.tgz"
   integrity sha512-k9HNuUVMlqVjQ9UHzfPjIqiDbWw7WqT1AoT7GL8VwvF3r0ZfArtgiSPAlmupyNquNgOJHTuH4CKYf8ttMTWBTQ==
-
-baseline-browser-mapping@^2.9.19:
-  version "2.11.18"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.18.tgz#49701f6ab6c58ccafb6d8e1ab2767574d9f0ba73"
-  integrity sha512-1iEmLEYSiE1SeBoAfPo/Mnx3PzfzHUkDK61ASkCpuk3YXugYLH5DYK1SzqV55F8FMI6s0F+/tCP7Polz1QRjxw==
 
 brace-expansion@^1.1.7:
   version "1.1.15"
@@ -1234,7 +1229,7 @@ chalk@^4.0.0:
 
 client-only@0.0.1:
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/client-only/-/client-only-0.0.1.tgz#38bba5d403c41ab150bff64a95c85013cf73bca1"
+  resolved "https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz"
   integrity sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==
 
 color-convert@^2.0.1:
@@ -2566,9 +2561,9 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next@^16.3.2:
+next@^16.2.9:
   version "16.3.2"
-  resolved "https://registry.yarnpkg.com/next/-/next-16.3.2.tgz#085cff5b8a0b0d3d65340b4e7c01ad665170feb4"
+  resolved "https://registry.npmjs.org/next/-/next-16.3.2.tgz"
   integrity sha512-/ZCaubUy17Lld1SiPWxuPbCk2ihqAxF2QNQaPZeEaEb7t1I58qhsJN187D7AfpapHAqUPXH0f/thtdW9dWgWFg==
   dependencies:
     "@next/env" "16.3.2"
@@ -2728,7 +2723,7 @@ path-parse@^1.0.7:
 
 picocolors@^1.1.1:
   version "1.1.1"
-  resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.1.1.tgz#3d321af3eab939b083c8f929a1d12cda81c26b6b"
+  resolved "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
 
 picomatch@^2.3.1:
@@ -2753,7 +2748,7 @@ postcss-value-parser@^4.2.0:
 
 postcss@8.5.23:
   version "8.5.23"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.5.23.tgz#3493550116f478487298301d2c2e8dc5a56e6594"
+  resolved "https://registry.npmjs.org/postcss/-/postcss-8.5.23.tgz"
   integrity sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==
   dependencies:
     nanoid "^3.3.16"
@@ -2968,7 +2963,7 @@ set-proto@^1.0.0:
 
 sharp@^0.35.3:
   version "0.35.3"
-  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.35.3.tgz#41ed21a46406be163eacd0be7b364b42fcf2885f"
+  resolved "https://registry.npmjs.org/sharp/-/sharp-0.35.3.tgz"
   integrity sha512-ej0zVHuZGHCiABXcNxeYhpRnPNPAcvbG8RMdBAhDAxLKkCRVSpK3Iyu7qbqw3JMzoj0REeM6f3tJLtVwl0023Q==
   dependencies:
     "@img/colour" "^1.1.0"
@@ -3055,7 +3050,7 @@ side-channel@^1.1.0:
 
 source-map-js@^1.2.1:
   version "1.2.1"
-  resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.2.1.tgz#1ce5650fddd87abc099eda37dcff024c2667ae46"
+  resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz"
   integrity sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==
 
 stable-hash@^0.0.5:
@@ -3152,7 +3147,7 @@ strip-json-comments@^3.1.1:
 
 styled-jsx@5.1.6:
   version "5.1.6"
-  resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-5.1.6.tgz#83b90c077e6c6a80f7f5e8781d0f311b2fe41499"
+  resolved "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz"
   integrity sha512-qSVyDTeMotdvQYoHWLNGwRFJHC+i+ZvdBRYosOFgC+Wg1vx4frN2/RG/NA7SYqqvKNLf39P2LSRA2pu6n0XYZA==
   dependencies:
     client-only "0.0.1"
