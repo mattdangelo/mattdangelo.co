@@ -8,7 +8,7 @@
     "email": "matthew.dangelo6@gmail.com"
   },
   "engines": {
-    "node": "24.x"
+    "node": "26.x"
   },
   "scripts": {
     "dev": "next dev",
